@@ -1,0 +1,32 @@
+@import '../../assets/scss/global';
+
+.signup-view {
+  // background-color: $defaultBgColor;
+  overflow: hidden;
+
+  .signup-form {
+    width: 480px;
+    margin: auto;
+
+    .textfield-container {
+      margin: 10px 0px;
+      label {
+        line-height: 1em;
+      }
+
+      .MuiOutlinedInput-input {
+        padding: 0.6em 0.8em;
+      }
+
+      .textfield-error-message {
+        color: #ff0033;
+        font-size: 0.8em;
+        line-height: 1.5em;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

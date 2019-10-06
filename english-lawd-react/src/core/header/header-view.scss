@@ -1,0 +1,45 @@
+@import '../../assets/scss/global';
+
+.header-view {
+  background-color: $primaryBgColor;
+  height: 80px;
+  overflow: hidden;
+  z-index: 100;
+  header {
+    padding: 16px 0px;
+
+    > div {
+      float: left;
+    }
+
+    .logo-container {
+      width: 128px;
+    }
+
+    .nav-horizontal {
+      font-weight: 600;
+
+      ul {
+        li {
+          padding: 0px 20px 0px 0px;
+          float: left;
+        }
+
+        li:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    .action-button-container {
+      float: right;
+    }
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+
+  }
+}

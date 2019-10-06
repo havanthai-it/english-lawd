@@ -1,16 +1,21 @@
+@import 'assets/scss/global';
+
 .app {
 
-    /*---TEXT---*/
-    .text-center {
-        text-align: center;
-    }
+  /*---MATERIAL UI---*/
+  /*---END MATERIAL UI---*/
 
-    .text-left {
-        text-align: left;
-    }
+  /*---TEXT---*/
+  .text-center {
+      text-align: center;
+  }
 
-    .text-right {
-        text-align: right;
-    }
-    /*---END TEXT---*/
+  .text-left {
+      text-align: left;
+  }
+
+  .text-right {
+      text-align: right;
+  }
+  /*---END TEXT---*/
 }

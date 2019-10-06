@@ -4,6 +4,7 @@
         "es6": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -20,6 +21,10 @@
     ],
     "rules": {
         "no-unused-vars": "off",
-        "no-undef": "off"
+        "no-undef": "off",
+        "indent": [
+          "error", 2
+        ],
+        "no-useless-escape": "off"
     }
 }
