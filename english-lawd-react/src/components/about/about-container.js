@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeView from './home-view';
+import AboutView from './about-view';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(HomeView)
+const About = connect(mapStateToProps, mapDispatchToProps)(AboutView)
 
-export default Home;
+export default About;

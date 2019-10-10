@@ -1,7 +1,6 @@
 package com.english.lawd.util.function;
 
-import com.english.lawd.util.ErrorUtil;
-import com.english.lawd.util.PropUtil;
+import com.english.lawd.util.ErrorUtils;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -17,7 +16,7 @@ public class UserUtil {
 
     public static String generateSalt(final int length) {
         if (length < 1) {
-            throw ErrorUtil.INTERNAL_SERVER_ERROR;
+            throw ErrorUtils.INTERNAL_SERVER_ERROR;
         }
 
         byte[] salt = new byte[length];
@@ -28,7 +27,7 @@ public class UserUtil {
 
     public static String hashPassword(String password, String salt) {
         final int ITERATIONS = 65536;
-        final int KEY_LENGTH = 512;
+        final int KEY_LENGTH = 128;
         final String ALGORITHM = "PBKDF2WithHmacSHA512";
 
         char[] chars = password.toCharArray();
@@ -44,7 +43,7 @@ public class UserUtil {
             byte[] securePassword = fac.generateSecret(spec).getEncoded();
             return Base64.getEncoder().encodeToString(securePassword);
         } catch (NoSuchAlgorithmException | InvalidKeySpecException ex) {
-            throw ErrorUtil.INTERNAL_SERVER_ERROR;
+            throw ErrorUtils.INTERNAL_SERVER_ERROR;
         } finally {
             spec.clearPassword();
         }

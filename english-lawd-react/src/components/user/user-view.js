@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../app.scss';
 
-class User extends React.Component {
+class UserView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -15,4 +15,4 @@ class User extends React.Component {
   }
 }
 
-export default User;
+export default UserView;

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeView from './home-view';
+import UserView from './user-view';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(HomeView)
+const User = connect(mapStateToProps, mapDispatchToProps)(UserView)
 
-export default Home;
+export default User;

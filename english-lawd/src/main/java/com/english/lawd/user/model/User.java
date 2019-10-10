@@ -2,37 +2,46 @@ package com.english.lawd.user.model;
 
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "user")
+@Entity
 public class User {
-	
 	@Id
-	@Field("_id")
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid")
+	@NotNull
 	String id;
-	
-	@Field("username")
+
+	@Column(unique = true)
+	@NotNull
+	String email;
+
+	@NotNull
 	String username;
-	
-	@Field("password")
+
+	@NotNull
 	String password;
 
-	@Field("salt")
+	@NotNull
 	String salt;
-	
-	@Field("birthday")
+
+	String gender;
+
 	Date birthday;
-	
-	@Field("email")
-	String email;
-	
+
+	String country;
+
+	String address;
+
+	String phone;
+
 }

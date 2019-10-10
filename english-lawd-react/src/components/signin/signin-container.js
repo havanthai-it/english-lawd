@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeView from './home-view';
+import SigninView from './signin-view';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(HomeView)
+const Signin = connect(mapStateToProps, mapDispatchToProps)(SigninView)
 
-export default Home;
+export default Signin;

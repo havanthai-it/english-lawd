@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeView from './home-view';
+import HeaderView from './header-view';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(HomeView)
+let Header = connect(mapStateToProps, mapDispatchToProps)(HeaderView);
 
-export default Home;
+export default Header;

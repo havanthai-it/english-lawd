@@ -1,19 +1,19 @@
 import React from 'react';
 
-class Footer extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class FooterView extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        return (
-            <div className="footer-view">
-                <footer>
-                    FOOTER
-                </footer>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="footer-view">
+        <footer>
+          FOOTER
+        </footer>
+      </div>
+    );
+  }
 }
 
-export default Footer;
+export default FooterView;

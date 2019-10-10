@@ -3,7 +3,7 @@ package com.english.lawd.util;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-public class ErrorUtil {
+public class ErrorUtils {
     // --- COMMON ERROR ---
     public static final ResponseStatusException INTERNAL_SERVER_ERROR = new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error");
     public static final ResponseStatusException BAD_REQUEST = new ResponseStatusException(HttpStatus.BAD_REQUEST, "Bad request");

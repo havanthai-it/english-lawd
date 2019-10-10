@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeView from './home-view';
+import GuidelineView from './guideline-view';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(HomeView)
+const Guideline = connect(mapStateToProps, mapDispatchToProps)(GuidelineView)
 
-export default Home;
+export default Guideline;

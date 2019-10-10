@@ -1,5 +1,5 @@
 package com.english.lawd.util;
 
-public class PropUtil {
+public class PropUtils {
     public static final String BLANK = "";
 }

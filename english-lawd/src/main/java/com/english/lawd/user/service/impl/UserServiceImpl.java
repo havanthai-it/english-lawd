@@ -3,7 +3,7 @@ package com.english.lawd.user.service.impl;
 import com.english.lawd.user.model.User;
 import com.english.lawd.user.repository.UserRepository;
 import com.english.lawd.user.service.UserService;
-import com.english.lawd.util.ErrorUtil;
+import com.english.lawd.util.ErrorUtils;
 import com.english.lawd.util.function.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -36,13 +36,13 @@ public class UserServiceImpl implements UserService {
 		// CHECK IF USERNAME EXISTS
 		User existUsername = userRepository.findByUsername(user.getUsername());
 		if (existUsername != null) {
-			throw ErrorUtil.USERNAME_EXISTS;
+			throw ErrorUtils.USERNAME_EXISTS;
 		}
 
 		// CHECK IF EMAIL EXISTS
 		User existEmail = userRepository.findByEmail(user.getEmail());
 		if (existEmail != null) {
-			throw ErrorUtil.EMAIL_EXISTS;
+			throw ErrorUtils.EMAIL_EXISTS;
 		}
 
 		// GENERATE SALT, HASHING PASSWORD

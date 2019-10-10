@@ -1,8 +1,8 @@
 import React from 'react';
 import MainTheme from './core/templates/themes/main-theme'
-import Header from './core/header/header-view';
-import Body from './core/body/body-view';
-import Footer from './core/footer/footer-view';
+import Header from './core/header/header-container';
+import Body from './core/body/body-container';
+import Footer from './core/footer/footer-container';
 import { ThemeProvider } from '@material-ui/styles';
 
 

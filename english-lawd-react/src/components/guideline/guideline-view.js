@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Guideline extends React.Component {
+class GuidelineView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,4 +14,4 @@ class Guideline extends React.Component {
   }
 }
 
-export default Guideline;
+export default GuidelineView;

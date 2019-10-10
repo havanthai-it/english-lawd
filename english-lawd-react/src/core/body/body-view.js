@@ -3,7 +3,7 @@ import { Container } from '@material-ui/core';
 import RouterOutlet from '../../router';
 import './body-view.scss';
 
-class Body extends React.Component {
+class BodyView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -19,4 +19,4 @@ class Body extends React.Component {
   }
 }
 
-export default Body;
+export default BodyView;

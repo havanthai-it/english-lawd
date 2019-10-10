@@ -4,7 +4,7 @@ import { Container, Button } from '@material-ui/core';
 import './header-view.scss';
 
 
-class Header extends React.Component {
+class HeaderView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -37,4 +37,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default HeaderView;

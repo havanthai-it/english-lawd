@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from '@material-ui/core';
 import './signin-view.scss';
 
-class Signin extends React.Component {
+class SigninView extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -23,4 +23,4 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin;
+export default SigninView;

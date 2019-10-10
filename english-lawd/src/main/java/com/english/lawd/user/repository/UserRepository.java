@@ -1,16 +1,18 @@
 package com.english.lawd.user.repository;
 
 import com.english.lawd.user.model.User;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String>, UserRepositoryCustom {
-	@Query("{ 'username' : ?0 }")
+public interface UserRepository extends CrudRepository<User, String> {
+
+	@Query("SELECT u FROM User u WHERE u.username = ?1")
 	User findByUsername(String username);
 
-	@Query("{ 'email' : ?0 }")
+	@Query("SELECT u FROM User u WHERE u.email = ?1")
 	User findByEmail(String email);
+
 }
