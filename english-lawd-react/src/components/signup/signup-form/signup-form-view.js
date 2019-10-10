@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { TextField, Button, CircularProgress } from '@material-ui/core';
-import api from '../../../utils/api-utils';
+import API from '../../../utils/api-utils';
 import './signup-form-view.scss';
 
 class SignupFormView extends React.Component {
@@ -162,8 +162,8 @@ class SignupFormView extends React.Component {
     this.setState({ onSubmiting: true });
     try {
       const config = {
-        method: api.signup.method,
-        url: api.signup.url,
+        method: API.SIGN_UP.METHOD,
+        url: API.SIGN_UP.URL,
         data: {
           email: this.state.email,
           username: this.state.username,

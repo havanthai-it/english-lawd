@@ -1,10 +1,10 @@
-const baseUrl = 'http://localhost:8080/api/v1';
+const BASE_URL = 'http://localhost:8080/api/v1';
 
-const api = {
-  signup: {
-    url: `${baseUrl}/user`,
-    method: 'post'
+const API = {
+  SIGN_UP: {
+    URL: `${BASE_URL}/user`,
+    METHOD: 'post'
   }
 };
 
-export default api;
+export default API;
