@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { TextField, Button, CircularProgress } from '@material-ui/core';
+import { TextField, Button, CircularProgress, Checkbox, FormControlLabel } from '@material-ui/core';
 import API from '../../../utils/api-utils';
 import './signup-form-view.scss';
 
@@ -79,6 +79,14 @@ class SignupFormView extends React.Component {
               placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               required />
             <div className="textfield-error-message">{this.state.confirmPasswordErrorMsg}</div>
+          </div>
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox checked={true} color="primary" required/>
+              }
+              label="I agree with the policy..."
+            />
           </div>
           <div>
             <Button type="submit" disabled={!this.state.canSubmit} variant="contained" color="secondary">

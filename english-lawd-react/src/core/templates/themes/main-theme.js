@@ -4,10 +4,10 @@ import { blue } from '@material-ui/core/colors';
 const MainTheme = createMuiTheme({
   palette: {
     primary: {
-      main: '#ff4641'
+      main: '#ff2626'
     },
     secondary: {
-      main: '#232d41'
+      main: '#012c4b'
     }
   },
   typography: {
