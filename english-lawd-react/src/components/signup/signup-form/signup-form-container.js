@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SignupFormView from './signup-form-view';
-import { openSignupSuccessBoxAction } from './signup-form-actions';
+import { openSignupSuccessBoxAction } from '../../../redux/signup/signup-actions';
 
 const mapStateToProps = (state) => {
   return {

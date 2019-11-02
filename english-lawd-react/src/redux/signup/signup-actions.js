@@ -1,4 +1,4 @@
-import ACTION from '../../../utils/action-utils';
+import ACTION from '../../utils/action-utils'
 
 export const openSignupSuccessBoxAction = (isSignupSuccess) => {
   return {

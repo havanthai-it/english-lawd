@@ -1,7 +1,5 @@
 package com.english.lawd.user.model;
 
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +7,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
@@ -43,5 +43,14 @@ public class User {
 	String address;
 
 	String phone;
+
+	String avatar;
+
+	String token;
+
+	@Column(name = "last_login")
+	Timestamp lastLogin;
+
+	String type;	// [basic, standard, premium]
 
 }

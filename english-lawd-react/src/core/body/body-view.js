@@ -11,7 +11,7 @@ class BodyView extends React.Component {
   render() {
     return (
       <div className="body-view">
-        <Container maxWidth="md">
+        <Container maxWidth="xl">
           <RouterOutlet />
         </Container>
       </div>

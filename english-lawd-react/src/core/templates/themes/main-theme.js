@@ -14,6 +14,10 @@ const MainTheme = createMuiTheme({
     fontFamily: '\'Work Sans\', sans-serif'
   },
   overrides: {
+    MuiGrid: {
+      item: {
+      }
+    },
     MuiButton: {
       root: {
         textTransform: 'inherit'

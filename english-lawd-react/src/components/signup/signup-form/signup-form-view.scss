@@ -2,22 +2,35 @@
 
 .signup-form-view {
 
+  border: solid 1px #cccccc;
+  box-shadow: 0px 0px 2px #cccccc;
+  max-width: 480px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+
   .signup-form {
-    width: 480px;
+    width: 100%;
     margin: auto;
 
     .textfield-container {
+      position: relative;
       margin: 10px 0px;
+
       label {
         line-height: 1em;
       }
 
       .MuiOutlinedInput-input {
-        padding: 0.6em 0.8em;
+        padding: 0.5em 0.8em;
       }
 
-      .textfield-error-message {
+      .tooltip-error {
         color: #ff0033;
+        position: absolute;
+        right: 10px;
+        top: 42px;
         font-size: 0.8em;
         line-height: 1.5em;
       }

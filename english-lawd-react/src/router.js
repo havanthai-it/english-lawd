@@ -6,6 +6,7 @@ import Guideline from './components/guideline/guideline-container';
 import User from './components/user/user-container';
 import Signin from './components/signin/signin-container';
 import Signup from './components/signup/signup-container';
+import AppLawd from './components/main/app-lawd/app-lawd-container';
 
 
 class RouterOutlet extends React.Component {
@@ -23,6 +24,8 @@ class RouterOutlet extends React.Component {
         <Route exact path="/user" component={User} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
+
+        <Route exact path="/app/lawd" component={AppLawd}></Route>
       </Switch>
     );
   }

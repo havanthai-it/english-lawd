@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { TextField, Button, CircularProgress, Checkbox, FormControlLabel } from '@material-ui/core';
+import { TextField, Button, CircularProgress, Checkbox, FormControlLabel, Tooltip, Fab } from '@material-ui/core';
+import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import API from '../../../utils/api-utils';
 import './signup-form-view.scss';
 
@@ -29,6 +31,21 @@ class SignupFormView extends React.Component {
     this.usernameErrorMsg = '';
     this.passwordErrorMsg = '';
     this.confirmPasswordErrorMsg = '';
+
+    this.theme = createMuiTheme({
+      overrides: {
+        MuiTooltip: {
+          tooltip: {
+            fontFamily: 'inherit',
+            color: '#ff0033',
+            fontSize: '0.8em',
+            lineHeight: '1em',
+            backgroundColor: '#ffc4b7',
+            maxWidth: '300px'
+          }
+        }
+      }
+    });
   }
 
   render() {
@@ -46,7 +63,17 @@ class SignupFormView extends React.Component {
               variant="outlined"
               placeholder="john@example.com"
               required />
-            <div className="textfield-error-message">{this.state.emailErrorMsg ? this.state.emailErrorMsg : ''}</div>
+            {
+              this.state.emailErrorMsg
+                ? <span className="tooltip-error">
+                  <MuiThemeProvider theme={this.theme}>
+                    <Tooltip title={this.state.emailErrorMsg}>
+                      <InfoRoundedIcon />
+                    </Tooltip>
+                  </MuiThemeProvider>
+                </span>
+                : null
+            }
           </div>
           <div className="textfield-container">
             <label>Username</label>
@@ -56,7 +83,17 @@ class SignupFormView extends React.Component {
               variant="outlined"
               placeholder="John Smiths"
               required />
-            <div className="textfield-error-message">{this.state.usernameErrorMsg}</div>
+            {
+              this.state.usernameErrorMsg
+                ? <span className="tooltip-error">
+                  <MuiThemeProvider theme={this.theme}>
+                    <Tooltip title={this.state.usernameErrorMsg}>
+                      <InfoRoundedIcon />
+                    </Tooltip>
+                  </MuiThemeProvider>
+                </span>
+                : null
+            }
           </div>
           <div className="textfield-container">
             <label>Password</label>
@@ -67,7 +104,17 @@ class SignupFormView extends React.Component {
               variant="outlined"
               placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               required />
-            <div className="textfield-error-message">{this.state.passwordErrorMsg}</div>
+            {
+              this.state.passwordErrorMsg
+                ? <span className="tooltip-error">
+                  <MuiThemeProvider theme={this.theme}>
+                    <Tooltip title={this.state.passwordErrorMsg}>
+                      <InfoRoundedIcon />
+                    </Tooltip>
+                  </MuiThemeProvider>
+                </span>
+                : null
+            }
           </div>
           <div className="textfield-container">
             <label>Confirm password</label>
@@ -78,12 +125,22 @@ class SignupFormView extends React.Component {
               variant="outlined"
               placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               required />
-            <div className="textfield-error-message">{this.state.confirmPasswordErrorMsg}</div>
+            {
+              this.state.confirmPasswordErrorMsg
+                ? <span className="tooltip-error">
+                  <MuiThemeProvider theme={this.theme}>
+                    <Tooltip title={this.state.confirmPasswordErrorMsg}>
+                      <InfoRoundedIcon />
+                    </Tooltip>
+                  </MuiThemeProvider>
+                </span>
+                : null
+            }
           </div>
           <div>
             <FormControlLabel
               control={
-                <Checkbox checked={true} color="primary" required/>
+                <Checkbox checked={true} color="primary" required />
               }
               label="I agree with the policy..."
             />
@@ -186,7 +243,7 @@ class SignupFormView extends React.Component {
 
         // ACTION
         this.props.openSignupSuccessBox(true);
-        
+
       }
     } catch (error) {
       this.setState({

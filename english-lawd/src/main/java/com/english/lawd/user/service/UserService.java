@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public interface UserService {
-	User signIn(String username, String password);
+	User signIn(String email, String password);
 	User signUp(User user);
 }

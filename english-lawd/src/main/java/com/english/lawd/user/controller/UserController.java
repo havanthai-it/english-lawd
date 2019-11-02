@@ -17,8 +17,8 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("")
-	public UserDto signIn(String username, String password) {
-		User response = userService.signIn(username, password);
+	public UserDto signIn(String email, String password) {
+		User response = userService.signIn(email, password);
 		if (response == null) {
 			throw ErrorUtils.INCORRECT_USERNAME_PASSWORD;
 		}
@@ -33,7 +33,6 @@ public class UserController {
 				|| (user.getEmail() == null) || user.getEmail().trim().isEmpty()) {
 			throw ErrorUtils.BAD_REQUEST;
 		}
-		user.setId(null);
 
 		User response = userService.signUp(user);
 		return ModelMapperUtil.map(response, UserDto.class);
